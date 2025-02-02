@@ -16,7 +16,10 @@
           <img src="{% static 'img/about.jpg' %}"
             class="card-img-top rounded">
           <div class="card-body text-center">
-            {{ movie.name }}
+            <a href="{% url 'movies.show' id=movie.id %}"
+              class="btn bg-dark text-white">
+              {{ movie.name }}
+            </a>
           </div>
         </div>
       </div>
