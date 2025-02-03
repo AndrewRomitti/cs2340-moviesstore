@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends '../../../moviesstore/templates/base.html' %}
 {% block content %}
 {% load static %}
 <div class="p-3">
@@ -13,7 +13,7 @@
       {% for movie in template_data.movies %}
       <div class="col-md-4 col-lg-3 mb-2">
         <div class="p-2 card align-items-center pt-4">
-          <img src="{% static 'img/about.jpg' %}"
+          <img src="{% static 'img/../../../moviesstore/static/img/about.jpg' %}"
             class="card-img-top rounded">
           <div class="card-body text-center">
             <a href="{% url 'movies.show' id=movie.id %}"

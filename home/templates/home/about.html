@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends '../../../moviesstore/templates/base.html' %}
 {% block content %}
 {% load static %}
 <div class="p-3">
@@ -27,7 +27,7 @@
         </p>
       </div>
       <div class="col-md-6 mx-auto mb-3 text-center">
-        <img src="{% static 'img/about.jpg' %}"
+        <img src="{% static 'img/../../../moviesstore/static/img/about.jpg' %}"
              class="max-width-100"
              alt="about" />
       </div>
