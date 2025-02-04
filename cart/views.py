@@ -24,4 +24,7 @@ def add(request, id):
     request.session['cart'] = cart
     return redirect('cart.index')
 
+def clear(request):
+    request.session['cart'] = {}
+    return redirect('cart.index')
 
