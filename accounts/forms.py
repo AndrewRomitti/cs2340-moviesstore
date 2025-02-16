@@ -25,3 +25,10 @@ class CustomUserCreationForm(UserCreationForm):
         if "@" not in username:
             raise ValidationError("Username must be a valid email address containing '@'.")
         return username
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = user.username  # will set email to username
+        if commit:
+            user.save()
+        return user
