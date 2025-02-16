@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.contrib.auth.forms import UserCreationForm
 from django.forms.utils import ErrorList
 from django.utils.safestring import mark_safe
@@ -18,3 +19,9 @@ class CustomUserCreationForm(UserCreationForm):
             self.fields[fieldname].widget.attrs.update(
                 {'class': 'form-control'}
             )
+
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
+        if "@" not in username:
+            raise ValidationError("Username must be a valid email address containing '@'.")
+        return username
