@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ihn-yw)#sf3iu^$tf%60-*)g)wk+#f!ork&6b9$d#ghy*0&^t#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aromit.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
