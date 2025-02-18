@@ -33,11 +33,15 @@
 }
 
 .img-card-200 {
-  width: fit-content;
+  max-width: 100%;
+  height: auto;
   max-height: 200px;
+  object-fit: contain;
 }
 
 .img-card-400 {
-  width: fit-content;
+  max-width: 100%;
+  height: auto;
   max-height: 400px;
+  object-fit: contain;
 }
