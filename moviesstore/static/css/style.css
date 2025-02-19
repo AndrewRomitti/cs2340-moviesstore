@@ -35,13 +35,13 @@
 .img-card-200 {
   max-width: 100%;
   height: auto;
-  max-height: 200px;
+  /**max-height: 200px; */
   object-fit: contain;
 }
 
 .img-card-400 {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
+  /** max-height: 400px; */
   object-fit: contain;
 }
